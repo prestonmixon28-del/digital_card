@@ -1,3 +1,5 @@
 I added an image to the assests folder and connectedf it to my flutter app. I decided to use image.asset to display and added my name below it.
 
 I added subtitles, contact informstion, and a about me section. I used Container, Row, Padding, and spacing to organize the profile card.
+
+custom widgest keeps the code organized by seperating different parts of the screen. This makes the code easier to read, reuse, and update.

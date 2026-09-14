@@ -20,42 +20,64 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/1694798235116.jpg',
-                width: 150,
-                height: 150,
-              ),
+              const ProfileHeader(),
               const SizedBox(height: 20),
-              const Text(
-                "Preston",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              
               const Text(
               'flutter developer',
               style: TextStyle(fontSize: 18),
               ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('email: prestonmixon28@gmail.com'),
-                  SizedBox(width: 10),
-                ]
-              ),
-              Container(
-                padding: const EdgeInsets.all(10),
-                color: Colors.blue [200],
-                child: const Text(
-                  'about me',
-                  style: TextStyle(fontSize: 16),
-                ),
-              )
+              const InfoCard(title: 'Email', value: 'prestonmixon28@gmail.com'),
+
+              const InfoCard(title: 'about me', value: 'Im learning flutter and app development')
             ]
           )
         )
       )
+    );
+  }
+}
+
+class ProfileHeader extends StatelessWidget {
+   const ProfileHeader({super.key});
+
+   @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Image.asset(
+          'assets/1694798235116.jpg',
+          width: 150,
+          height: 150,
+        ),
+        const SizedBox(height: 20),
+        const Text(
+          'Preston',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        )
+      ],
+    );
+  }
+}
+
+class InfoCard extends StatelessWidget {
+  final String title;
+  final String value;
+
+  const InfoCard({
+    super.key,
+    required this.title,
+    required this.value,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      child: Text('$title: $value'),
     );
   }
 }
