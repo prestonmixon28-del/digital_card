@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Digital Card'),
         ),
-        body:Center(
+        body:Padding(
+          padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -30,6 +31,25 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Text(
+              'flutter developer',
+              style: TextStyle(fontSize: 18),
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('email: prestonmixon28@gmail.com'),
+                  SizedBox(width: 10),
+                ]
+              ),
+              Container(
+                padding: const EdgeInsets.all(10),
+                color: Colors.blue [200],
+                child: const Text(
+                  'about me',
+                  style: TextStyle(fontSize: 16),
                 ),
               )
             ]
